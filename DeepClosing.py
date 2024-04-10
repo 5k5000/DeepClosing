@@ -337,7 +337,7 @@ class DeepClosing(LightningModule):
             T = T.unsqueeze(0).to(self.device)
         T_dd = self.DeepDilation(T=T,is_infer_sliding_window=True, sw_roi_size=(224,224),sw_batch_size=4,verbose=False)
         T_dd = transform.inverse(T_dd.squeeze().cpu())
-        T_dd = AsDiscrete(threshold=0.15)(T_dd).int()
+        T_dd = AsDiscrete(threshold=0.2)(T_dd).int()
         
         M_T = T_dd.squeeze() - T.squeeze().cpu()
         M_T[M_T<0] =0
