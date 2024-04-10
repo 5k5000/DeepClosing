@@ -15,9 +15,23 @@ pip install nibabel
 ```
 
 ## Quick Reference:
-Deep Closing: (1) Deep Dilation: Link(https://github.com/5k5000/DeepClosing/blob/c7c5ce9d3173ae1449f739da1dfc38aac61c4074/DeepClosing.py#L289)
-(2) Simple Component Erosion:
-Link:
+To begin with, the proposed framework,Deep Closing, consists of two operation:
+- (1) Deep Dilation: https://github.com/5k5000/DeepClosing/blob/c7c5ce9d3173ae1449f739da1dfc38aac61c4074/DeepClosing.py#L289
+- (2) Simple Component Erosion:
+https://github.com/5k5000/DeepClosing/blob/2e7cb06a8948dea991485ff989017f9bb5b03977/DeepClosing.py#L259
+- (*) DeepClosing = DeepDilation + Simple Component Erosion (Inference):
+https://github.com/5k5000/DeepClosing/blob/2e7cb06a8948dea991485ff989017f9bb5b03977/DeepClosing.py#L313
+
+
+The implementation of the proposed Simple Point Erosion Module is presented in the position below:
+https://github.com/5k5000/DeepClosing/blob/2e7cb06a8948dea991485ff989017f9bb5b03977/DeepClosing.py#L313
+
+Besides, the Masked Shape Reconstruction (Training Stage) is presented in the position below:
+https://github.com/5k5000/DeepClosing/blob/2e7cb06a8948dea991485ff989017f9bb5b03977/DeepClosing.py#L30
+
+
+## todo
+We plan to provide more detailed information after the acceptance of our paper. Thanks for your constructive comments to help us improve our paper.
 
 
 
