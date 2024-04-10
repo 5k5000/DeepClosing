@@ -1,0 +1,31 @@
+Name: "DeepClosing_DRIVE"
+Devices: !!python/tuple [ 0 ]
+Epoch: 300
+Dataset:
+  dataset_name: DRIVE
+  batch_size: 4
+Model:
+  name: "unet"
+  input_type: "label"
+  args:
+    in_chans: 1
+    mask_ratio: !!python/tuple [ 0, 0.25 ]
+    patch_size: !!python/tuple [[2,8],[2,8]]
+    is_random_rotate: True
+    final_act: "sigmoid"
+    network_setting: "default"
+  optimizer:
+    name: "adamW"
+    args:
+      lr: 1.0e-2
+      betas: !!python/tuple [ 0.9, 0.95 ]
+      weight_decay: 0.05
+  lr_scheduler:
+    name: "cosine annealing" 
+    args:
+      T_max: 300
+      eta_min: 1.0e-4
+  SPE:
+    target_HW: !!python/tuple [ 224, 224 ]
+  topo_weight: 1.0e-1
+  
