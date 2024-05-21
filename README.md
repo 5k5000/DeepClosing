@@ -1,5 +1,5 @@
 # Deep Closing: Enhancing Topological Connectivity in Medical Tubular Segmentation
-The repo of our paper 'Deep Closing: Enhancing Topological Connectivity in Medical Tubular Segmentation' (In submission)
+The repo of our paper 'Deep Closing: Enhancing Topological Connectivity in Medical Tubular Segmentation'
 
 
 ## Environment
